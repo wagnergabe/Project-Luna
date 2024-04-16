@@ -19,7 +19,7 @@ fetch("https://api.petfinder.com/v2/oauth2/token", {
    })
 
 const getData = () => {
-fetch(`https://api.petfinder.com/v2/animals/?special_needs=1`, {
+fetch(`https://api.petfinder.com/v2/animals/?special_needs=1&type=cat&limit=50`, {
     headers: {
         Authorization: `Bearer ${token}`,
     }
@@ -34,7 +34,7 @@ getPets(data.animals)
 function getPets(pets) {
     main.innerHTML = "";
     pets.forEach((pet) => {
-        let {name, description } = pet
+        let {name, description, url } = pet
         let photo = ""
         
         if (pet.primary_photo_cropped === null) {
@@ -49,7 +49,7 @@ function getPets(pets) {
 
         petEl.innerHTML = `
         <div class="pet">
-            <img src=${photo}>
+            <a href = "${url}" target = "_blank"><img src=${photo}></a>
             <div class="pet-info">
             <div class="pet-name">
                 <h3>${name}</h3>

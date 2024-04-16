@@ -76,20 +76,27 @@ body {
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 20px;
+   
 }
 
 .pet {
     width: 300px;
-    margin: 1rem;
+    height: 500px;
     background-color: var(--secondary-color);
     box-shadow: 0 4px 5px rgba(0,0,0,0.2);
     position: relative;
     border-radius: 2px;
     overflow: hidden;
+    margin:8px auto;
 }
 
 .pet img {
-    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    width: 95%;
+    height: 50%;
 }
 
 .pet-info {
@@ -106,7 +113,7 @@ main {
 
 .overview {
 background-color: var(--third-color);
-padding: 2rem;
+padding: 1rem;
 
 }
 
@@ -114,4 +121,8 @@ padding: 2rem;
     display: flex;
     justify-content: center;
   
+}
+
+#p-intro {
+    text-align: center;
 }
