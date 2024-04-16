@@ -14,8 +14,14 @@
 
 body {
   background-color: var(--primary-color);
-  font-family: "Poppins", sans-serif;
   margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: "Cedarville Cursive", cursive;
 }
 
 
@@ -81,6 +87,33 @@ main {
    
 }
 
+.find {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+
+}
+
+#btn {
+    width: 200px;
+    height: 200px;
+    margin:8px auto;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: "Cedarville Cursive", cursive;
+    color: var(--fourth-color);
+    background-color: #430A5D;
+    border: #eee solid 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease 0.2s;
+    border-radius: 3px;
+}
+
+#btn:hover{
+    background-color: #600A5E;
+}
+
+
 .pet {
     width: 300px;
     height: 500px;
@@ -125,4 +158,26 @@ padding: 1rem;
 
 #p-intro {
     text-align: center;
+}
+
+/* Search Page */
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    border: #EEE4B1 solid 20px;
+    border-radius: 20px;
+    transition: transform 0.3s ease 0.7s;
+}
+
+.image-container img:hover {
+   transform: scale(1.1);
 }
