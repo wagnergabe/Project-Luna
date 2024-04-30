@@ -52,15 +52,15 @@ const getData = () => {
     function getPets(pets) {
         main.innerHTML = "";
         pets.forEach((pet) => {
+            if (pet.primary_photo_cropped === null) {
+                return
+            }
+            
             let {name, description, url } = pet
             let photo = ""
             
-            if (pet.primary_photo_cropped === null) {
-                photo = "./assets/pics/silhouette.jpg"
-            }
-            else {
-                photo = pet.primary_photo_cropped["full"]
-            }
+            photo = pet.primary_photo_cropped["full"]
+        
     
             const petEl = document.createElement('div')
             petEl.classList.add('pet')
