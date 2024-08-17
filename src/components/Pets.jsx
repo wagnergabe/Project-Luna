@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import cat from "../assets/photos/cat.png";
-import dog from "../assets/photos/dog.png";
+import cat from "../../public/cat.png"
+import dog from "../../public/dog.png"
 
 
 function Pets() {
